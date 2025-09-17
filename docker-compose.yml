@@ -16,7 +16,7 @@ services:
   django_app:
     build:
       context: .
-    image: cloudhero173/cloudguru:latest
+    image: django
     container_name: "django_cont"
     ports:
       - "8000:8000"
