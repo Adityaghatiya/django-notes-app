@@ -3,6 +3,7 @@ pipeline {
     agent { label 'dhapu' }
 
     stages {
+        
         stage('Hello') {
             steps {
                 script {
@@ -39,6 +40,11 @@ pipeline {
             steps {
                 echo 'Deploying container'
                 sh 'sudo docker compose down && sudo docker compose up -d'
+            }
+        }
+        stage('bye') {
+            steps {
+               echo 'Bye Bye Aditya'
             }
         }
     }
